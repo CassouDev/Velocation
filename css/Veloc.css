@@ -1,0 +1,461 @@
+/*GLOBAL*/
+body
+{
+	margin: 0px; 
+	font-family: 'Roboto', sans-serif;
+}
+.bloc_page
+{
+	max-width: 1440px;
+	margin: auto;
+	text-align: center;
+	color: #272727; /*couleur de typo principale du site*/
+}
+p
+{
+	font-size: 14px;
+	line-height: 25px;
+	margin: auto;
+}
+
+/*LOGO*/
+.logo
+{
+	position: absolute;
+	width: 430px;
+	height: 100px;
+	left: 0;
+	top: 0;
+	color: white;
+	text-align: center;
+	z-index: 2;
+	background-color: rgba(0, 113, 166, 0.9);
+	border-radius: 0 0 40px 10px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.logo {
+	display: flex;
+}
+#logo_titre{
+	font-size: 16px;
+}
+#logo_img {
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: 10px 0 10px 15px;
+}
+header .logo p {
+	font-weight: bold;
+	font-size: 15px;
+}
+
+/*SLIDER*/
+.sectionSlider
+{
+	position: relative;
+}
+img
+{
+	width: 100%;
+}
+.titre
+{
+	position: absolute;
+	width: 35%;
+	bottom: 4px;
+	right: 5%;
+	color: white;
+	text-align: center;
+	background-color: rgba(252, 92, 29, 0.9);
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 15px 15px 0px 0px;
+}
+.titre h1
+{
+	display: flex;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 25px;
+	margin: 0;
+}
+.titre h1 strong {
+	font-size: 25px;
+	background-color: rgb(252, 92, 29);
+	color: white;
+	border-radius: 10px;
+	margin-right: 20px;
+	padding: 8px 15px;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+/* flèches défilement */
+.fa-chevron-left, .fa-chevron-right
+{
+	position: absolute;
+	top: 53%;
+	z-index: 3;
+	color: white;
+	background-color: rgba(18, 116, 100, 0.9);
+	font-size: 25px;
+}
+.fa-chevron-left:hover, .fa-chevron-right:hover
+{
+	background-color:  rgba(255, 255, 255, 1);
+	color: rgba(18, 116, 100, 1);
+}
+.fa-chevron-left
+{
+	border-radius: 0 10px 10px 0;
+	left: 0px;
+	padding: 1.5% 1% 1.5% 0.5%;
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.fa-chevron-right
+{
+	border-radius: 10px 0 0 10px;
+	right: 0px;
+	padding: 1.5% 0.5% 1.5% 1%;
+	box-shadow: 3px 0px 5px rgba(0, 0, 0, 0.2);
+}
+/* Play/pause */
+.play_pause {
+	position: absolute;
+	width: 110px;
+	margin-left: 45%;
+	margin-right: 45%;
+	bottom: 5%;
+	border-radius: 10px;
+	font-size: 15px;
+	color: white;
+	background-color: #127464;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.fa-pause {
+	padding: 20px;
+	border-radius: 10px;
+}
+.fa-play {
+	padding: 20px;
+	border-radius: 10px;
+	background-color:  rgba(255, 255, 255, 1);
+	color: #127464;
+}
+
+/*MAP*/
+.sectionMap {
+	display: flex;
+}
+#map { 
+	width: 100%;
+	height: 670px;
+}
+
+/*DIV INFOS STATION*/
+.infos-station {
+	display: none;
+    flex-direction: column;
+	height: 580px;
+    padding: 20px 20px 0px 45px;
+	text-align: left;
+}
+#name-station {
+	font-size: 20px;
+	color: rgba(18, 116, 100, 1);
+	margin-bottom: 0px;
+}
+#address-station {
+	font-size: 16px;
+	color: rgba(18, 116, 100, 1);
+}
+/*formulaire*/
+.form-reservation {
+	margin-bottom: 15px;
+	font-size: 14px;
+}
+#p-nom {
+	font-weight: bold;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+#form-label-nom, #form-label-prenom {
+	font-weight: normal;
+}
+#form-prenom:required, #form-nom:required {
+	border-radius: 4px;
+	margin-bottom: 10px;
+	background-color: rgba(0, 113, 166, 0.3);
+	border-color: transparent;
+}
+#form-bouton-reserver {
+	margin-top: 5px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	padding: 5px 15px 5px 15px;
+	border: none;
+	background-color: rgba(252, 92, 29, 0.9);
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+	color: white;
+	font-weight: bold;
+}
+#form-bouton-valider {
+	margin-top: 15px;
+	border-radius: 5px;
+	padding: 5px 15px 5px 15px;
+	border: none;
+	background-color: grey;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+	color: white;
+	font-weight: bold;
+}
+#form-bouton-reserver:focus, #form-bouton-valider:focus {
+	background-color: rgba(18, 116, 100, 1); 
+	border: none;
+}
+#nom-please, #no-bike { /*'Merci "Merci de renseigner vos nom et prénom !" / "Aucun vélo n'est disponible sur cette station */
+	display: none;
+	color: rgba(252, 92, 29, 0.9);
+}
+/* signature */
+#div_signature {
+	display: none;
+}
+#signature {
+	margin-top: 50px;
+	margin-left: 50px;
+}
+#please-sign{
+	font-size: 12px;
+	color: rgba(252, 92, 29, 0.9);
+}
+#canvas {
+	border: solid 1px black;
+}
+#supprSignature {
+	margin-top: 5px;
+	border-radius: 5px;
+	padding: 3px 8px 3px 8px;
+	border-width: 1px;
+	background-color: rgba(0, 113, 166, 0.9);
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+	border: none;
+	color: white;
+	font-weight: bold;	
+}
+#bouton-annuler {
+	margin-top: 5px;
+	border-radius: 5px;
+	padding: 3px 8px 3px 8px;
+	border-width: 1px;
+	background-color:rgba(252, 92, 29, 0.9);
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+	border: none;
+	color: white;
+	font-weight: bold;	
+}
+/* compte à rebours */
+.timer {
+	display: none;
+	color: black;
+	text-align: left;
+}
+#reservation {
+	color: white;
+	font-weight: bold;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	background-color:  rgba(252, 92, 29, 0.9);
+	padding: 5px;
+}
+#p-timer {
+	margin-top: 10px;
+	color: rgba(252, 92, 29, 1);
+}
+
+@media screen and (max-width: 1024px) {
+	/*LOGO*/
+	.logo {
+		display: block;
+		width: 300px;
+		height: 150px;
+	}
+	/* Titres oranges */
+	.titre h1 strong {
+		height: 32px;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	/*LOGO*/
+	.logo {
+		width: 250px;
+		height: 110px;
+	}
+	#logo_img {
+		width: 50%;
+	}
+
+	/*SLIDER*/
+	.titre h1 {
+		padding: 20px;
+	}
+	.titre h1 strong {
+		font-size: 20px;
+	}
+	/* TITRES oranges */
+	.titre h1 strong {
+		height: 28px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	/* LOGO */
+	.logo {
+		width: 100%;
+		height: 70px;
+		display: flex;
+		justify-content: center;	
+		border-radius: 0;
+	}
+	#logo_img {
+		width: 130px;
+		padding: 10px 20px 10px 0;
+	}
+	#logo_titre {
+		font-size: 15px;
+		margin: auto 0 auto 0;
+	}
+	/*SLIDER*/
+	.titre {
+		right: 3%;
+		top: 70px;
+		bottom: initial;
+		border-radius: 0 0 15px 15px;
+	}
+	.titre h1 {
+		font-size: 16px;
+		padding: 15px;
+	}
+	.slide {
+		margin-top: 70px;
+	}
+	/*play/pause*/
+	.fa-chevron-left, .fa-chevron-right {
+		font-size: 18px;
+	}
+	.play_pause {
+		font-size: 13px;
+		width: 106px;
+	}
+	/* Infos station_DESCRIPTION */
+	.description p{
+		font-size: 13px;
+	}
+	#name-station {
+		font-size: 18px;
+	}
+	.description p #adress-station {
+		font-size: 15px;
+	}
+	/* FORMULAIRE */
+	.form-reservation {
+		font-size: 13px;
+	}
+}
+
+@media screen and (max-width: 600px) {	
+	/* LOGO */
+	#logo_img {
+		width: 120px;
+	}
+	/*SLIDER*/
+	.titre {
+		width: 50%;
+		right: 0%;
+	}
+	.titre h1 {
+		font-size: 13px;
+		padding: 15px 15px 10px 15px;
+	}
+	.titre h1 strong {
+		height: 21px;
+		font-size: 17px;
+	}
+	/*play/pause*/
+	.play_pause {
+		margin-left: 40%;
+		font-size: 11px;
+		width: 102px;
+	}
+	.fa-chevron-left {
+		padding: 2.5% 3% 2.5% 1%;
+	}
+	.fa-chevron-right {
+		padding: 2.5% 1% 2.5% 3%;
+	}
+	/* MAP */
+	#map {
+		height: 560px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	/* LOGO */
+	#logo_titre {
+		font-size: 14px;
+	}
+	#logo_img {
+		width: 110px;
+	}
+	/*SLIDER*/
+	.titre {
+		border-radius: 0 0 15px 15px;
+	}
+	.titre h1 {
+		font-size: 12px;
+		padding: 10px;
+	}
+	.titre h1 strong {
+		font-size: 15px;
+		height: 18px;
+	}
+	.play_pause {
+		bottom: 3%;
+	}
+}
+@media screen and (max-width: 375px) {
+	/* LOGO */ 
+	#logo_img {
+		padding: 12px 15px 12px 0;
+	}
+	#logo_titre {
+		font-size: 13px;
+	}
+	/* SLIDER */
+	.slide {
+		margin-top: 70px;
+	}
+	.titre {
+		width: 100%;
+		right: 0;
+		background-color: rgba(252, 92, 29, 1);
+		border-radius: 0;
+		bottom: -65px;
+		top: initial;
+	}
+	.titre h1 {
+		height: 52px;
+		font-size: 14px;
+		padding: 18px 25px 0 25px;
+	}
+	/* play/pause */
+	.play_pause {
+		margin-left: 35%;
+	}
+	.fa-chevron-left, .fa-chevron-right {
+		top: 63%;
+	}
+	/*MAP*/
+	.sectionMap {
+		margin-top: 65px;
+	}
+}

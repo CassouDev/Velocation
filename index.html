@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+    	<meta charset="utf-8" />
+		<title>Location de vélo</title>
+		<link rel="icon" type="image/png" href="images/Veloc_favicon.png"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0">
+        <link rel="stylesheet" media="screen" href="css/Veloc.css">
+		<script src="https://kit.fontawesome.com/1d97b80b9e.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+			integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+			crossorigin=""/>
+		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+			integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+			crossorigin=""></script>
+	</head>
+
+	<body>
+		<div class="bloc_page">
+			<header>
+			</header>
+<!--SLIDER-->			
+			<section class="sectionSlider">
+				<div class="logo">
+					<img id="logo_img" src="images/veloclogo.png" alt="logo Veloc"/>
+					<p id="logo_titre">Location de vélos à Lyon !</p>
+				</div>
+				<img class="slide" src="images/slider/fille_reservation_web.jpg" alt="location de vélo"/>
+				<div class="titre">
+					<h1 class="txtSlide"><strong>1</strong>Trouvez la station la plus proche de vous et réservez votre vélo</h1>
+				</div>
+				<div class="fleches">
+						<i class="fas fa-chevron-left"></i>
+						<i class="fas fa-chevron-right"></i>
+				</div>
+				<div class="play_pause">
+					<i class="fas fa-pause"></i>
+					<i class="fas fa-play"></i>
+				</div>
+			</section>
+<!--MAP-->
+			<section class="sectionMap">
+				<div id="map"></div>
+				<div id="station"></div>
+				<div class="infos-station">
+					<div class="description">
+						<h1 id="name-station"></h1>
+						<p id="address-station"></p>
+						<p id="statut-station"></p>
+						<p id="available-bikes"></p>
+						<p id="available-supports"></p>
+					</div>
+					<form name="formulaire" action="google.fr" class="form-reservation">
+						<p id="p-nom">Formulaire de réservation:</p>
+							<label id="form-label-nom">Nom: </label>
+							<input type="text" name="Nom" id="form-nom" required><br />
+							<label id="form-label-prenom">Prénom: </label>
+							<input type="text" name="Prenom" id="form-prenom" required><br />
+							<input id="form-bouton-reserver" type="button" name="Reserver" value="Réserver">
+							<p id="nom-please">"Merci de renseigner vos nom et prénom !"</p>
+							<p id="no-bike">"Aucun vélo n'est disponible sur cette station"</p>
+						<div id="div_signature">
+							<p id="please-sign">Merci d'apposer votre signature avant de valider :</p>
+							<canvas id="canvas"></canvas><br />
+							<button id="supprSignature" type="button" name="Effacer" value="Effacer">Effacer</button>
+							<input id="form-bouton-valider" data-sign type="button" name="Valider" value="Valider">
+						</div>
+					</form>
+					<div class="timer">
+						<div id="reservation"></div>
+						<p id="p-timer">Cette réservation prendra fin dans <span id="compteurMin"></span> minute(s) et <span id="compteurSec"></span> secondes(s).</p>
+						<button id="bouton-annuler" type="button" name="Annuler" value="Annuler">Annuler</button>
+					</div>	
+				</div>
+			</section>
+
+		</div>
+
+		<script src="js/Slider.js"></script>
+		<script src="js/Reservation.js"></script>
+		<script src="js/Canvas.js"></script>
+		<script src="js/Compteur.js"></script>
+		<script src="js/AppLyon.js"></script>
+	</body>
+</html>
